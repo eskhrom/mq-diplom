@@ -104,7 +104,7 @@
   font-weight: 700;
 }
 
-.menu-item:not(:last-child) {
+.items {
   margin-right: 30px;
 }
 
@@ -197,7 +197,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  padding: 10%;
+  padding: 40px 30px;
 }
 
 .trend {
@@ -209,10 +209,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-right: 1%;
-  padding-bottom: 1%;
-  padding-left: 1%;
-  margin-right: 0.3%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  margin-right: 5px;
   z-index: 0;
 }
 
@@ -761,7 +761,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 35px;
 }
 
 .product-price {
@@ -776,7 +776,7 @@
 
 .product-rub-old {
   font-size: 14px;
-  margin-left: 5%;
+  margin-left: 5px;
 }
 
 .product-price-old {
@@ -789,7 +789,7 @@
 
 .product-rub {
   font-size: 20px;
-  margin-left: 5%;
+  margin-left: 5px;
 }
 
 .product-button {
@@ -895,20 +895,33 @@
   right: 0px;
   bottom: 0;
   left: 0px;
-  z-index:2;
+  z-index: 2;
 }
 
+
 .popup-close {
-  display: block;
-  background-image: url(../SVG/from-x.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 18px;
-  height: 18px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-indent: -9999px;
+  cursor: pointer;  
+}
+
+.popup-close:before, .popup-close:after {
+  content: "";
+  background-color: #ffffff;
+  border-radius: 5px;
   position: absolute;
-  top: 10%;
-  right: 38%;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+}
+
+.popup-close:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup-close:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .popup-conteiner {
@@ -920,12 +933,13 @@
 
 .popup-hide:before {
   content:"";
-  max-width: 1200px;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
   background: rgba(0,0,0,5);
   opacity: 0.6;
 }
@@ -1038,7 +1052,7 @@
 }
 
 .header-content {
-  padding-left: 5%;
+  padding-left: 35px;
 }
 
 .menu {
@@ -1050,7 +1064,7 @@
   width: 23px;
   height: 15px;  
   border: none;
-  margin-right: 5%;
+  margin-right: 35px;
   background-color: transparent;
   position: relative;
   text-indent: -9999px;
@@ -1091,13 +1105,9 @@
   flex-wrap: wrap;
 }
 
-.trend:nth-child(odd) {
- margin-right: 0.5%;
-}
-
 .trend {
   width: 49.5%;
-  margin-bottom: 0.5%;
+  margin-bottom: 35px;
 }
 
 .container-1 {
@@ -1153,7 +1163,7 @@
   top: -60px;
   border: 3px solid #b59f5b;
   width: 330px;
-  padding: 10%;
+  padding: 20px;
   flex-grow: 1;
   z-index: 0;
 }
@@ -1197,7 +1207,7 @@
   width: 25px;
   height: 20px;  
   border: none;
-  margin-left: 90%;
+  margin-left: 550px;
   background-color: transparent;
   position: relative;
   text-indent: -9999px;
@@ -1237,7 +1247,7 @@
 .info {
   width: 100%;
   font-size: 26px;
-  padding: 5%;
+  padding: 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1249,7 +1259,7 @@
 
 .trend {
   width: 100%;
-  margin-bottom: 1%;
+  margin-bottom: 5px;
 }
 
 .heading {
@@ -1259,7 +1269,7 @@
 .container-1 {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 5%;
+  padding: 0 30px;
 }
 
 .last-posts {
@@ -1290,11 +1300,12 @@
 }
 
 .last-news {
-  width: 275px;
+  width: 100%;
 }
 
-.last-news {
-  width: 100%;
+.last-news-header {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .name-mailing::after{
@@ -1313,7 +1324,7 @@
   content:"";
   position: absolute;
   bottom: 0;
-  left: 140px;
+  left: 220px;
   width: 66px;
   height: 3px;
   background: #b59f5b;
@@ -1325,7 +1336,7 @@
   content:"";
   position: absolute;
   bottom: 0;
-  left: 140px;
+  left: 220px;
   width: 66px;
   height: 3px;
   background: #b59f5b;
@@ -1334,7 +1345,7 @@
 }
 
 .name-heading {
-padding-left: 20%;
+padding-left: 80px;
 }
 
 .name-heading::after{
@@ -1368,13 +1379,13 @@ padding-left: 20%;
   top: -60px;
   border: 3px solid #b59f5b;
   width: 330px;
-  padding: 10%;
+  padding: 20px;
   flex-grow: 1;
   z-index: 0;
 }
 
 .footer-items {
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 }
